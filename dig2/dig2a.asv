@@ -1,0 +1,7 @@
+function[H]=dig2a()
+s=sym('s');z=sym('z');n=sym('n');
+a=(1-z^(-1))/0.1;
+H=25/(a^2+2*0.4*5*a+25);
+T=iztrans(H);
+Td=subs(T,-1:40);
+stem(Td,'-.');

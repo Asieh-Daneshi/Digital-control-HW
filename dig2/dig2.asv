@@ -1,0 +1,11 @@
+function[h]=dig2()
+s=sym('s');
+t=sym('t');
+H=25/(s*(s^2+2*0.4*5*s+25));
+h=ilaplace(H);
+x=1*t;
+m=0:40;
+ezplot(x,h)
+xlabel('t')
+ylabel('h(t)')
+

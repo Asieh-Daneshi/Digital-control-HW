@@ -1,0 +1,9 @@
+function[y]=dig4a()
+t=sym('t');k=1;y=0;
+p=0.1*heaviside(t)*(1-exp(-t));
+while(k<200)
+    m=subs(p,t,t-0.1*k);
+    y=y+m;
+    k=k+1;
+end
+ezplot(t,y,[0,20]);xlabel('t');ylabel('y(t)');
